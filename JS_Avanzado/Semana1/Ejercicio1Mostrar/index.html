@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ejercicio 1 | Validar Formulario</title>
+</head>
+<body>
+
+    <h1>Reto 1: Validador de Formulario</h1>
+    <p>Completar el formulario y enviarlo. El evento <code>onSubmit</code> llamará a su validador</p>
+
+    <form onsubmit="return validar(event)">
+        <div class="fila">
+            <label>
+                Nombre Completo
+                <input type="text" id="nombre" placeholder="Ej.: Ana Pérez" required>
+            </label>
+            <small>Regla sugerida: mínimo 3 caracteres, solo letras y espacios.</small>
+        </div>
+
+        <div class="fila">
+            <label>
+                Edad
+                <input type="number" id="edad" min="0" step="1"placeholder="Ej.: 20" required>
+                <small>Regla sugerida: número enterio >= 0.</small>
+            </label>
+        </div>
+        <fieldset>
+            <legend>Intereses (Elige 0 o más)</legend>
+            <label><input type="checkbox" name="intereses" value="JavaScript"> JavaScript</label>
+            <label><input type="checkbox" name="intereses" value="HTML"> HTML</label>
+            <label><input type="checkbox" name="intereses" value="CSS"> CSS</label>
+        </fieldset>
+        <div class="fila">
+            <label>
+                Suscrito a noticias
+                <select id="suscrito">
+                    <option value="si">Si</option>
+                    <option value="no">No</option>
+                </select>
+            </label>
+        </div>
+        <button type="submit">Validar y mostrar</button>
+    </form>
+    <h2>Resultado</h2>
+    <pre id="salida">Sin validar...</pre>
+    <script src="app.js"></script>
+</body>
+</html>

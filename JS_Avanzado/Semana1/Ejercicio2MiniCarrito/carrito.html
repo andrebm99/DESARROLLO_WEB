@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Reto 2: Minicarrito con IGV</title>
+</head>
+<body>
+    <h1>Reto 02 — Mini Carrito con IGV</h1>
+    <p>Cambia las cantidades y presiona el botón. El evento <code>onclick</code> ejecutará el cálculo.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Tipo</th>
+                <th>Precio (S/)</th>
+                <th>Cantidad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Mouse</td>
+                <td>tecnologia</td>
+                <td>50</td>
+                <td><input type="number" min="0" step="1" value="1" data-item="Mouse"></td>
+            </tr>
+            <tr>
+                <td>Atún en lata</td>
+                <td>alimento</td>
+                <td>8</td>
+                <td><input type="number" min="0" step="1" value="2" data-item="Atún en lata"></td>
+            </tr>
+            <tr>
+                <td>Libro</td>
+                <td>libro</td>
+                <td>60</td>
+                <td><input type="number" min="0" step="1" value="0" data-item="Libro"></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="acciones">
+        <button type="button" onclick="calcular()">Calcular</button>
+        <button onclick="limpiar()">Limpiar</button>
+    </div>
+    <h2>
+        Detalle
+    </h2>
+    <pre id="salida">
+        Calculemos...
+    </pre>
+    <script src="app.js"></script>
+</body>
+</html>
